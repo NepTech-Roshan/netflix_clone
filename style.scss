@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
+
+// others imported files used at bottom due to their needs and
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+$netflixcolor: rgb(229, 9, 20);
+/* var(--netflix-color); */
+$fontgotham: Arial, Helvetica, sans-serif;
+
+html {
+  width: 100vw;
+  height: auto;
+  font-family: $fontgotham;
+}
+
+body {
+  background-color: rgba(11, 8, 4, 0.88);
+  color: white;
+}
+.middle {
+  width: 100vw;
+  height: 92.5vh;
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.9) 0,
+      rgba(0, 0, 0, 0.5) 100%,
+      rgba(0, 0, 0, 0.9) 60%
+    ),
+    url("images/background-home-image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+  position: relative;
+  .header {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 4rem;
+    img {
+      position: absolute;
+      left: 10rem;
+      max-width: 12rem;
+    }
+    button {
+      position: absolute;
+      right: 11.5rem;
+      top: 1.5rem;
+      width: 4.5rem;
+      height: 2rem;
+      color: #ffffff;
+      background-color: $netflixcolor;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  }
+  button:hover {
+    background-color: rgba(229, 9, 20, 0.9);
+  }
+  .center-items {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    .intro {
+      line-height: 4rem;
+      /*  intro of the page (unlimited movies . . . .)  */
+      h1 {
+        font-family: $fontgotham;
+        font-size: 3em;
+        font-weight: 1000;
+      }
+
+      h4 {
+        font-size: 1.4rem;
+        font-weight: 600;
+      }
+    }
+    .form-items {
+      line-height: 3rem;
+
+      h3 {
+        font-size: 1.2rem;
+      }
+      input[type="email"] {
+        width: 25rem;
+        height: 3.6rem;
+        margin: 0.2rem;
+        padding: 1rem;
+        background-color: rgba(29, 29, 30, 0.6);
+        color: #ffffff;
+        border: none;
+        outline: 0.001rem solid;
+        border-radius: 4px;
+      }
+      input[type="email"]:active {
+        border: 2px solid #ff0000;
+        outline: 2px solid #ffffff;
+        opacity: 1;
+      }
+      input[type="email"]::placeholder {
+        font-size: 1.2rem;
+      }
+
+      button {
+        width: 15rem;
+        height: 4rem;
+        padding: 1rem;
+        border-radius: 4px;
+        font-size: 1.4rem;
+        background-color: $netflixcolor;
+        color: #ffffff;
+        font-weight: 400;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: rgba(229, 9, 20, 0.9);
+      }
+    }
+  }
+}
+// contents of the page
+.mainBox {
+  .box {
+    max-width: 100%;
+    height: 80vh;
+    background-color: #000000;
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .box-1,
+    .box-2,
+    .box-3,
+    .box-4 {
+      width: 100%;
+      height: 60vh;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      .contents-1,
+      .contents-2,
+      .contents-3,
+      .contents-4 {
+        h1 {
+          font-family: $fontgotham;
+          font-size: 3em;
+          font-weight: 1000;
+        }
+        p {
+          font-size: 1.5rem;
+          font-family: $fontgotham;
+        }
+      }
+      img {
+        width: 90%;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+.FAQ {
+  max-width: 100%;
+  height: auto;
+  background-color: #000000;
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1{
+    font-family: $fontgotham;
+    font-size: 3.1rem;
+    font-weight: 1000;
+    margin: 50px 20px 10px 20px;
+  }
+  .plus{
+    width: 75%;
+    height: auto;
+    margin-top: 8px;
+    transition-duration: 0.5s;
+    h3{
+      height:5rem;
+      padding: 2rem;
+      font-size: 1.6rem;
+      background-color: rgb(45, 45, 45);
+      margin-top:1px;
+    }
+    h3:hover{
+      background-color: rgb(71, 70, 70);
+    }
+    }
+    .plus-1,.plus-3,.plus-6{
+      p{
+        height:12rem;
+        margin-top:1px;
+        background-color: rgb(45, 45, 45);
+        padding:14px 15px;
+        font-family: $fontgotham;
+        font-size:1.5rem;
+        display: none;
+      }  
+  }
+  .plus-2,.plus-4,.plus-5{
+    p{
+        height:7rem;
+        margin-top:1px;
+        background-color: rgb(45, 45, 45);
+        padding:20px 15px;
+        font-family: $fontgotham;
+        font-size:1.5rem;
+        display: none;
+    }
+}
+  // same code bcoz the below email and button is same
+  .form-items {
+    line-height: 3rem;
+    margin-top:2rem;
+    h3 {
+      font-size: 1.2rem;
+    }
+    input[type="email"] {
+      width: 25rem;
+      height: 3.6rem;
+      margin: 0.2rem;
+      padding: 1rem;
+      background-color: rgba(29, 29, 30, 0.6);
+      color: #ffffff;
+      border: none;
+      outline: 0.001rem solid;
+      border-radius: 4px;
+    }
+    input[type="email"]:active {
+      border: 2px solid #ff0000;
+      outline: 2px solid #ffffff;
+      opacity: 1;
+    }
+    input[type="email"]::placeholder {
+      font-size: 1.2rem;
+    }
+
+    button {
+      width: 15rem;
+      height: 4rem;
+      padding: 1rem;
+      border-radius: 4px;
+      font-size: 1.4rem;
+      background-color: $netflixcolor;
+      color: #ffffff;
+      font-weight: 400;
+      cursor: pointer;
+      margin-bottom:5rem;
+    }
+    button:hover {
+      background-color: rgba(229, 9, 20, 0.9);
+    }
+  }
+}
+
+footer{
+max-width:100vw;
+height:50vh;
+margin-top:10px;
+background-color:#000000;
+.ques{
+  position: relative;
+  top:3rem;
+  left:13rem;
+  a{
+  color:rgb(169,169,161);
+  font-size: 1rem;
+  }
+}
+.footer{
+  max-width:100%;
+  height: 100%;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+align-items: center;
+  .info-1,.info-2,.info-3,.info-4{
+    display: flex;
+    flex-direction: column;
+    margin:0 6rem;
+    a{
+      text-decoration:underline;
+      color:rgb(169,169,161);
+      font-size:14px;
+      padding: 1rem;
+    }
+  }
+  .info-1{
+    button{
+      outline:2px solid #ffffff;
+      border: 1px solid rgba(265,265,265,0.6);
+       background-color:transparent;
+       color: rgba(265,265,265,0.9);
+       padding:8px;
+       font-size: 1rem;
+       font-weight: 500;
+       border-radius:5px;
+    }
+  }
+}
+}
+@import "responsive"; /*imported css from responsive.scss to make the page responsive for different devices */

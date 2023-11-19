@@ -1,0 +1,9 @@
+@media only screen and (max-width: 600px) {
+  .middle .header img {
+    left: 0rem;
+    max-width: 0.5rem;
+  }
+  .middle .header button {
+    right: 1rem;
+  }
+}/*# sourceMappingURL=responsive.css.map */
